@@ -1544,6 +1544,7 @@ static Exit_status check_master_version()
     goto err;
   }
 
+
   if (!(version = row[0]))
   {
     error("Could not find server version: "
@@ -1553,7 +1554,7 @@ static Exit_status check_master_version()
 
   delete glob_description_event;
   switch (*version) {
-  case '3':
+  case '3': // if version is 3.x, event version is 1
     glob_description_event= new Format_description_log_event(1);
     break;
   case '4':

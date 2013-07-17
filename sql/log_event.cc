@@ -4181,8 +4181,10 @@ Format_description_log_event(const char* buf,
         BEGIN_LOAD_QUERY_EVENT,
         EXECUTE_LOAD_QUERY_EVENT,
       };
+    //permutation序列
     event_type_permutation= perm;
     /*
+     *
       Since we use (permuted) event id's to index the post_header_len
       array, we need to permute the post_header_len array too.
     */
